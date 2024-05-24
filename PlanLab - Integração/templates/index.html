@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_index.css') }}">
+    <title>PlanLab</title>
+</head>
+<body>
+    <div class="conteiner">
+        
+        <nav>
+            <div class="img">
+                <img src="static/img/planlab logo branco p.png" alt="">   
+            </div>
+            <ul class="side-itens">
+                <li class="side-item-box active">
+                    <a href="{{ url_for('index') }}">
+                        <img src="static/img/MaterialSymbolsHomeOutlineRounded.png" alt="">
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="side-item-box">
+                    <a href="{{ url_for('planos_de_aula') }}">
+                        <img src="static/img/MaterialSymbolsContractEditOutlineRounded.png" alt="">
+                        <span>Planos de Aula</span>
+                    </a>
+                </li>
+                <li class="side-item-box">
+                    <a href="">
+                        <img src="static/img/MaterialSymbolscadenetaToAppRounded.png" alt="">
+                        <span>Cardeneta</span>
+                    </a>
+                </li>
+                <li class="side-item-box">
+                    <a href="">
+                        <img src="static/img/MaterialSymbolsExitToAppRounded.png" alt="">
+                        <span>Sair</span>
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+
+        <header>
+            <div class="usuario">
+                <img src="https://randomuser.me/api/portraits/women/24.jpg" alt="">
+                <div>
+                    <strong class="user-nome">Aurora Silva</strong>
+                    <div class="cargo"><span>Professor(a)</span></div>
+                </div>
+                
+                
+            </div>
+        </header>
+
+
+        <article class="planos-aula">
+            <h2 class="titulo-box-card">Planos de Aula</h2>
+            <div class="cards">
+                {% for plano in planos %}
+                <div class="card">
+                    <a href="{{ url_for('planos_de_aula', id=plano.id) }}" class="card-info">
+                        <h3 class="card__title">{{ plano.titulo }}</h3>
+                        <p class="card__content">{{ plano.descricao }}</p>
+                        <div class="card__date">{{ plano.data_aula }}</div>
+                    </a>
+                    <div class="card__arrow">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15" width="15">
+                            <path fill="#fff" d="M13.4697 17.9697C13.1768 18.2626 13.1768 18.7374 13.4697 19.0303C13.7626 19.3232 14.2374 19.3232 14.5303 19.0303L20.3232 13.2374C21.0066 12.554 21.0066 11.446 20.3232 10.7626L14.5303 4.96967C14.2374 4.67678 13.7626 4.67678 13.4697 4.96967C13.1768 5.26256 13.1768 5.73744 13.4697 6.03033L18.6893 11.25H4C3.58579 11.25 3.25 11.5858 3.25 12C3.25 12.4142 3.58579 12.75 4 12.75H18.6893L13.4697 17.9697Z"></path>
+                        </svg>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </article>
+        
+
+
+        <article class="cardenetas" >
+            <span class="titulo-box-card">Cadernetas</spaN>
+            <div class="cards">
+              <div class="card">
+                
+                <a href="" class="card-info">
+                   <h3 class="card__title">Caderneta</h3>
+                    <p class="card__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    <div class="card__date">
+                        4 de maio de 2024
+                    </div> 
+                </a>
+
+                <div class="card__arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15" width="15">
+                        <path fill="#fff" d="M13.4697 17.9697C13.1768 18.2626 13.1768 18.7374 13.4697 19.0303C13.7626 19.3232 14.2374 19.3232 14.5303 19.0303L20.3232 13.2374C21.0066 12.554 21.0066 11.446 20.3232 10.7626L14.5303 4.96967C14.2374 4.67678 13.7626 4.67678 13.4697 4.96967C13.1768 5.26256 13.1768 5.73744 13.4697 6.03033L18.6893 11.25H4C3.58579 11.25 3.25 11.5858 3.25 12C3.25 12.4142 3.58579 12.75 4 12.75H18.6893L13.4697 17.9697Z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="card">
+                
+                <a href="" class="card-info">
+                   <h3 class="card__title">Caderneta</h3>
+                    <p class="card__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    <div class="card__date">
+                        4 de maio de 2024
+                    </div> 
+                </a>
+
+                <div class="card__arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15" width="15">
+                        <path fill="#fff" d="M13.4697 17.9697C13.1768 18.2626 13.1768 18.7374 13.4697 19.0303C13.7626 19.3232 14.2374 19.3232 14.5303 19.0303L20.3232 13.2374C21.0066 12.554 21.0066 11.446 20.3232 10.7626L14.5303 4.96967C14.2374 4.67678 13.7626 4.67678 13.4697 4.96967C13.1768 5.26256 13.1768 5.73744 13.4697 6.03033L18.6893 11.25H4C3.58579 11.25 3.25 11.5858 3.25 12C3.25 12.4142 3.58579 12.75 4 12.75H18.6893L13.4697 17.9697Z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="card">
+                
+                <a href="" class="card-info">
+                   <h3 class="card__title">Caderneta</h3>
+                    <p class="card__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    <div class="card__date">
+                        4 de maio de 2024
+                    </div> 
+                </a>
+
+                <div class="card__arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15" width="15">
+                        <path fill="#fff" d="M13.4697 17.9697C13.1768 18.2626 13.1768 18.7374 13.4697 19.0303C13.7626 19.3232 14.2374 19.3232 14.5303 19.0303L20.3232 13.2374C21.0066 12.554 21.0066 11.446 20.3232 10.7626L14.5303 4.96967C14.2374 4.67678 13.7626 4.67678 13.4697 4.96967C13.1768 5.26256 13.1768 5.73744 13.4697 6.03033L18.6893 11.25H4C3.58579 11.25 3.25 11.5858 3.25 12C3.25 12.4142 3.58579 12.75 4 12.75H18.6893L13.4697 17.9697Z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div class="card">
+                
+                <a href="" class="card-info">
+                   <h3 class="card__title">Caderneta</h3>
+                    <p class="card__content">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                    <div class="card__date">
+                        4 de maio de 2024
+                    </div> 
+                </a>
+
+                <div class="card__arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="15" width="15">
+                        <path fill="#fff" d="M13.4697 17.9697C13.1768 18.2626 13.1768 18.7374 13.4697 19.0303C13.7626 19.3232 14.2374 19.3232 14.5303 19.0303L20.3232 13.2374C21.0066 12.554 21.0066 11.446 20.3232 10.7626L14.5303 4.96967C14.2374 4.67678 13.7626 4.67678 13.4697 4.96967C13.1768 5.26256 13.1768 5.73744 13.4697 6.03033L18.6893 11.25H4C3.58579 11.25 3.25 11.5858 3.25 12C3.25 12.4142 3.58579 12.75 4 12.75H18.6893L13.4697 17.9697Z"></path>
+                    </svg>
+                </div>
+            </div>  
+            </div>
+            
+            
+        </article>
+        <footer>
+            <div class="container-footer">
+                <p>© 2024 PlanLab. Todos os direitos reservados.</p>
+                <p>Contato: <a href="mailto:info@planlab.com">info@planlab.com</a> | Telefone: +55 123 456 7890</p>
+                <div class="social-icons">
+                    <!-- Adicione os ícones das redes sociais aqui -->
+                    <a href="#"><img src="static/img/SimpleIconsFacebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="static/img/SimpleIconsInstagram.png" alt="Instagram"></a>
+                    <a href="#"><img src="static/img/LogosGithubIcon.png" alt="Github"></a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>

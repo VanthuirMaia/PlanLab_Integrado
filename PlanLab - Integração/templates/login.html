@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlanLab</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style_login.css') }}">
+</head>
+<body>
+    <div class="main-login">
+        <div class="conteiner">
+            <div class="left-login">
+                <img src="static/img/planlab logo branco p.png" alt="">
+                <div>
+                    <h1>Bem vindo(a) <br>de volta!</h1>
+                    <p>Agradecemos por sempre <br>estar conosco.</p>  
+                </div>
+            </div>
+
+            <div class="right-login">
+                <div class="box-login"><h1 >Login</h1></div>
+                
+                <div class="box-input" autocomplete="off">
+                    <div class="input-group">
+                        <label class="label">Email</label>
+                        <input class="input" name="email" id="email" type="email"  >
+                    </div>
+
+                    <div class="input-group">
+                        <label class="label">Senha</label>
+                        <input class="input" name="senha" id="senha" type="password" >
+                    </div>
+                </div>
+                
+                <div class="box-button">
+                    <div class="esqueceu-senha"><a href="">Esqueceu a sua senha?</a></div>
+                        <button>Conectar-se</button>
+                    <div class="criar-conta"><a href="">Criar uma conta</a></div>
+                </div>
+
+                
+            </div>  
+        </div>
+        
+    </div>
+
+</body>
+</html>

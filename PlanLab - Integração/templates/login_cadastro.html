@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="main-login">
+        <div class="conteiner">
+            <div class="left-login">
+                <img src="img/planlab logo branco p.png" alt="">
+                <div>
+                    <h1>Bem <br>Vindo(a)</h1>
+                    <p>
+                      Entre, planeje e execute com rapidez e eficiência. Nosso objetivo é simplificar cada etapa do seu processo
+                      para que você possa alcançar resultados extraordinários em um piscar de olhos. Vamos começar essa jornada de
+                      produtividade juntos!
+                    </p>
+                </div>
+            </div>
+
+            <div class="right-login">
+                <div class="box-login"><h1 >Cadastro</h1></div>
+                
+                <div class="box-input" autocomplete="off">
+                    <div class="input-group">
+                        <label class="label">Nome</label>
+                        <input class="input" name="nome" id="nome" type="text"  >
+                    </div>
+                    <div class="input-group">
+                        <label class="label">E-mail</label>
+                        <input class="input" name="email" id="email" type="email"  >
+                    </div>
+                    <div class="input-group">
+                        <label class="label">Confirmar E-mail</label>
+                        <input class="input" name="email" id="email" type="email"  >
+                    </div>
+
+                    <div class="input-group">
+                        <label class="label">Senha</label>
+                        <input class="input" name="senha" id="senha" type="password" >
+                    </div>
+                    <div class="input-group">
+                        <label class="label">Confirmar Senha</label>
+                        <input class="input" name="senha" id="senha" type="password" >
+                    </div>
+                </div>
+                
+                <div class="box-button">
+                
+                    <button>Conectar-se</button>
+
+                </div>
+
+            </div>  
+        </div>
+        
+    </div>
+
+</body>
+</html>

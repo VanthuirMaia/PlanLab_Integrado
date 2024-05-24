@@ -1,0 +1,215 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+    font-size: 62.5%; /* 1rem = 10px */
+}
+body {
+    background-color: #D2DEEC;
+    font-size: 1.6rem;
+}
+
+body * {
+    font-family: "Public Sans", sans-serif;
+    /* border: solid 1px red; */
+}
+
+.container {
+    width: 70vw;
+    margin: 5rem auto;
+    margin-left: 100px;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: .8rem;
+    box-shadow: 0.8rem 0.8rem 3rem #a5b5c7;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.dados {
+    display: flex;
+    gap: 3rem;
+    margin: 2rem 1rem;
+    font-size: 2rem;
+}
+
+.data input{
+    background-color: #E8F0FE;
+    border: .2rem solid #0244F5;
+    border-radius: .5rem;
+    width: 13rem;
+    height: 4rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.turma select{
+    background-color: #E8F0FE;
+    border: .2rem solid #0244F5;
+    border-radius: .5rem;
+    width: 8.5rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    padding: 0rem .5rem;
+    font-weight: 400;
+}
+
+.semestre select{
+    background-color: #E8F0FE;
+    border: .2rem solid #0244F5;
+    border-radius: .5rem;
+    width: 8.5rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    padding: 0rem .5rem;
+    font-weight: 400;
+}
+
+.titulo input{
+    background-color: #E8F0FE;
+    border: .2rem solid #0244F5;
+    border-radius: .5rem;
+    width: 19rem;
+    height: 4rem;
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+
+.bloco {
+    margin-bottom: 2rem;
+    gap: 2rem;
+}
+
+.bloco h2 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.sub-bloco {
+    border-radius: .8rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub-bloco h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.6rem;
+}
+
+textarea {
+
+    font-size: 1.5rem;
+    max-width: 100%;
+    border: .2rem solid transparent;
+    padding: 2rem;
+    outline: none;
+    overflow: hidden;
+    background-color: #E8F0FE;
+    border: .2rem solid #0244F5;
+    border-radius: 1rem;
+    transition: all 0.5s;
+    box-shadow: .1rem .1rem .7rem #b3bcd4;
+}
+
+textarea:hover,
+textarea:focus {
+    border: .2rem solid #0244F5;
+    box-shadow: 0rem 0rem 0rem ,7rem rgb(74, 157, 236, 20%);
+    background-color: white;
+}
+
+.sub-bloco-avaliacao {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    max-width: 100%;
+    justify-content: space-between;
+    margin-bottom: 3rem;
+}
+
+
+.sub-bloco-avaliacao div{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.avaliacao-box {
+    width: 60rem;
+    height: 30rem;
+}
+
+.observacoes-box {
+    width: 60rem;
+    height: 30rem;
+}
+
+.avaliacao-box textarea {
+    height: 100%;
+}
+.observacoes-box textarea {
+    height: 100%;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 100%;
+    cursor: pointer;
+    padding: 1.2rem 3rem;
+    border: 0;
+    border-radius: 1rem;
+    background-color: #0244F5;
+    color: #ffffff;
+    font-weight: Bold;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    font-size: 2rem;
+}
+
+
+button:hover {
+    background-color: #6991ff;
+    box-shadow: 0 0 2rem #6fc5ff50;
+}
+
+
+  
+button:active {
+    background-color: #a7beff;
+    transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    box-shadow: none;
+    transform: scale(0.98);
+}
+
+hr {
+    margin-bottom: 3rem;
+}
+
+label {
+    margin-bottom: .2rem;
+    font-size: 1.8rem;
+}
+
+h3 {
+    color: #474747;
+}
